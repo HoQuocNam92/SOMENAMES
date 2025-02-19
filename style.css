@@ -1,0 +1,469 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #3498db;
+    --font-size: 16px;
+    --black-color: #000;
+}
+
+body,
+html {
+    background-color: #f1f1f1;
+    font-family: "Raleway", serif;
+
+}
+
+#main {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.active {
+    display: block !important;
+    transform: translateX(0) !important;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 8888;
+    display: none;
+}
+
+
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: 99999;
+    text-align: center;
+    padding-top: 3%;
+    display: none;
+}
+
+.close-modal {
+    position: absolute;
+    color: #fff;
+    font-size: 32px;
+    top: 0;
+    right: 0;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.close-modal:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.img-modal {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    background-color: #000;
+    z-index: 9999;
+    transform: translateX(100%);
+    transition: transform 0.3s linear;
+}
+
+.nav {
+    text-align: center;
+}
+
+.nav .close {
+    padding: 32px 16px !important;
+}
+
+.nav a {
+    display: block;
+    padding: 16px;
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav a:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+
+
+#header {
+    position: fixed;
+    padding: 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 999;
+}
+
+#header .logo {
+    display: inline-block;
+    font-size: 24px;
+    padding: 8px 16px;
+
+}
+
+#header .bars {
+    float: right;
+    font-size: 24px;
+    padding: 8px 16px;
+    color: var(--black-color);
+}
+
+.grid-items {
+    margin-top: 83px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-items img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    filter: grayscale(50%);
+    cursor: pointer;
+    transition: opacity 0.5s ease;
+}
+
+.grid-items img:hover {
+    opacity: 0.5;
+
+}
+
+.pagination {
+    padding: 32px 0;
+    text-align: center;
+}
+
+.pagination a {
+    padding: 12px 16px;
+    display: inline-block;
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--black-color);
+    margin-right: -4px;
+
+
+}
+
+.pagination a:hover {
+    background-color: var(--black-color);
+    color: #fff;
+}
+
+.focused {
+    background-color: var(--black-color) !important;
+    color: #fff !important;
+}
+
+.focused:hover {
+    background-color: #ccc !important;
+    color: var(--black-color) !important;
+}
+
+
+
+.about-section {
+    background-color: #616161;
+    padding: 32px 16px;
+
+}
+
+.about {
+    width: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+
+}
+
+.about-section .about-title {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
+    color: #f1f1f1;
+    width: 100%;
+    text-align: center;
+
+}
+
+.about-image {
+    padding: 32px 0;
+    aspect-ratio: auto 600/650;
+    width: 600px;
+    max-width: 100%;
+}
+
+.about h4 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #fff;
+    text-align: start;
+    font-weight: 400
+}
+
+.about p {
+    text-align: justify;
+    color: #fff;
+    font-size: 15px;
+    line-height: 22.5px;
+    margin: 15px 0;
+}
+
+.about hr {
+    margin: 20px 0;
+}
+
+.skill-name {
+    letter-spacing: 4px;
+}
+
+.skill-status {
+    background-color: #fff;
+}
+
+.skill-progress {
+    background-color: #9e9e9e;
+    padding: 4px 8px;
+}
+
+.w-95-center {
+    width: 95%;
+    text-align: center;
+}
+
+.w-85-center {
+    width: 85%;
+    text-align: center;
+}
+
+.w-80-center {
+    width: 80%;
+    text-align: center;
+}
+
+.download-btn {
+    padding: 12px 24px;
+    margin: 16px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+
+.charge-title {
+    padding: 16px 0;
+}
+
+.pricing-container {
+    display: flex;
+}
+
+.pricing-card {
+    width: 50%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+
+.card {
+    background-color: #fff;
+    list-style: none;
+    text-align: center;
+}
+
+.card li {
+    padding: 16px;
+    font-size: 15px;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.per-option {
+    font-size: 24px !important;
+    padding: 32px 16px !important;
+    color: #fff !important;
+    background-color: var(--black-color) !important;
+    border: none !important;
+}
+
+.card h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.send-btn {
+    background-color: #f1f1f1 !important;
+}
+
+.card button {
+    font-size: 15px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.card button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+
+
+.contact-section {
+    padding: 32px 24px;
+}
+
+.contact {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact h4 {
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.contact p {
+    margin: 15px 0;
+    font-size: 15px;
+    line-height: 22.5px;
+}
+
+.contact button {
+    padding: 8px 16px;
+    font-size: 15px;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    cursor: pointer;
+    border: none;
+}
+
+.contact button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+
+.input-form {
+    margin: 16px 0;
+}
+
+.input-form label {
+    font-size: 15px;
+}
+
+.input-form input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+
+
+
+
+.footer-section {
+    padding: 32px 16px;
+    background-color: rgb(158, 158, 158);
+
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 8px;
+}
+
+.footer h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.info p {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+
+.post {
+    display: flex;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.post:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.post-image {
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+
+}
+
+.post p {
+    line-height: 25px;
+}
+
+
+
+
+
+
+.popular-tags span {
+    padding: 4px 8px;
+    margin-bottom: 16px;
+    display: inline-block;
+    font-size: 12px;
+    background-color: #616161;
+    color: #fff;
+}
+
+
+.tag-special {
+    background-color: var(--black-color) !important;
+    color: #fff !important;
+    font-size: 15px !important;
+}

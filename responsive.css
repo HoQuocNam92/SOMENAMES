@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+
+    .grid-items,
+    .pricing-container,
+    .footer {
+        display: block !important;
+    }
+
+    .pricing-card {
+        width: 100% !important;
+
+    }
+}
