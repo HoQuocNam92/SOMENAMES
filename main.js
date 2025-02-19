@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded',function(e) {
     });
     closeModal.addEventListener('click',()=>{
         modal.style.display='none';
+        
     });
     modal.addEventListener('click',(e)=>{
         if(e.target == modal){
