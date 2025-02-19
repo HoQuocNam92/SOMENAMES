@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
@@ -61,7 +62,7 @@
         <div class="about-section">
             <div class="about">
                 <h4 class="about-title"> <b>About Me</b></h4>
-                <img src="./images/avatar_hat (4).jpg" alt="" class="about-image">
+                <img src="./images/avatar_hat (4).jpg" alt="about-me" class="about-image" data-aos="flip-up">
                 <h4>My Name</h4>
                 <p>Some text about me. I love taking photos of PEOPLE. I am lorem ipsum consectetur adipiscing elit, sed
                     do
@@ -219,6 +220,10 @@
         </div>
     </div>
     <script src="./main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
